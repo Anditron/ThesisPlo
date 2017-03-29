@@ -3,7 +3,6 @@ Plotting for ARCTEST
 
 Dependencies:
 
-qCustomPlot 2.0 
-Qt5
+qCustomPlot 2.0  and Qt5
 
 Built using QtCreator IDE
