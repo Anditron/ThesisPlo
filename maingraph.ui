@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1073</width>
-    <height>655</height>
+    <width>1331</width>
+    <height>657</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,36 +27,9 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>363</x>
-      <y>562</y>
-      <width>271</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <widget class="QLabel" name="fileNameLabel">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Filename:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="nameLineEdit"/>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
+      <x>32</x>
       <y>530</y>
-      <width>641</width>
+      <width>491</width>
       <height>31</height>
      </rect>
     </property>
@@ -65,11 +38,11 @@
       <widget class="QLabel" name="label">
        <property name="font">
         <font>
-         <pointsize>12</pointsize>
+         <pointsize>9</pointsize>
         </font>
        </property>
        <property name="text">
-        <string>Path:</string>
+        <string>File:</string>
        </property>
       </widget>
      </item>
@@ -81,7 +54,7 @@
        <item>
         <widget class="QPushButton" name="uploadBtn">
          <property name="text">
-          <string>Plot</string>
+          <string>Browse...</string>
          </property>
         </widget>
        </item>
@@ -89,78 +62,162 @@
      </item>
     </layout>
    </widget>
+   <widget class="QListWidget" name="listGraphs">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>20</y>
+      <width>251</width>
+      <height>501</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnAddGraph">
+    <property name="geometry">
+     <rect>
+      <x>1210</x>
+      <y>530</y>
+      <width>80</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add graph</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRmvGraph">
+    <property name="geometry">
+     <rect>
+      <x>1090</x>
+      <y>530</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Remove graph</string>
+    </property>
+   </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>244</x>
-      <y>564</y>
-      <width>108</width>
-      <height>23</height>
+      <x>32</x>
+      <y>567</y>
+      <width>300</width>
+      <height>27</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <widget class="QRadioButton" name="radioBtnFile">
-       <property name="text">
-        <string>File</string>
+      <widget class="QLabel" name="fileNameLabel">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
        </property>
-       <attribute name="buttonGroup">
-        <string notr="true">buttonGroup</string>
-       </attribute>
+       <property name="text">
+        <string>Extension (e g .local)</string>
+       </property>
       </widget>
      </item>
      <item>
-      <widget class="QRadioButton" name="radioBtnAll">
-       <property name="text">
-        <string>All</string>
-       </property>
-       <attribute name="buttonGroup">
-        <string notr="true">buttonGroup</string>
-       </attribute>
-      </widget>
+      <widget class="QLineEdit" name="nameLineEdit"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4"/>
      </item>
     </layout>
    </widget>
-   <widget class="QToolButton" name="btnZoomIn">
+   <widget class="QRadioButton" name="radioBtnAll">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>530</y>
-      <width>27</width>
-      <height>23</height>
+      <x>400</x>
+      <y>569</y>
+      <width>40</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>+</string>
+     <string>All</string>
     </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
    </widget>
-   <widget class="QToolButton" name="btnZoomOut">
+   <widget class="QRadioButton" name="radioBtnFile">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>530</y>
-      <width>27</width>
-      <height>23</height>
+      <x>349</x>
+      <y>569</y>
+      <width>45</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>-</string>
+     <string>Ext</string>
+    </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup</string>
+    </attribute>
+   </widget>
+   <widget class="QPushButton" name="btnSave">
+    <property name="geometry">
+     <rect>
+      <x>1130</x>
+      <y>560</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save as PDF</string>
     </property>
    </widget>
-   <zorder>layoutWidget</zorder>
+   <widget class="QPushButton" name="btnXzoom">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>530</y>
+      <width>61</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X Zoom</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnYzoom">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>530</y>
+      <width>61</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y Zoom</string>
+    </property>
+   </widget>
    <zorder>layoutWidget</zorder>
    <zorder>graph</zorder>
+   <zorder>listGraphs</zorder>
+   <zorder>btnAddGraph</zorder>
+   <zorder>btnRmvGraph</zorder>
    <zorder>layoutWidget</zorder>
-   <zorder>btnZoomIn</zorder>
-   <zorder>btnZoomOut</zorder>
+   <zorder>radioBtnAll</zorder>
+   <zorder>radioBtnFile</zorder>
+   <zorder>btnSave</zorder>
+   <zorder>btnXzoom</zorder>
+   <zorder>btnYzoom</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1073</width>
-     <height>23</height>
+     <width>1331</width>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuGraphs">
